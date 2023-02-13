@@ -26,18 +26,15 @@ KDE Presets from Valve's SteamOS 3.0
 mkdir -p %{buildroot}%{_datadir}/
 mkdir -p %{buildroot}%{_bindir}/
 mkdir -p %{buildroot}%{_prefix}/lib/
-mkdir -p %{buildroot}%{_prefix}/local/
 mkdir -p %{buildroot}%{_sysconfdir}/
 cp -rv usr/share/* %{buildroot}%{_datadir}
 cp -rv usr/bin/* %{buildroot}%{_bindir}
 cp -rv usr/lib/* %{buildroot}%{_prefix}/lib
-cp -rv usr/local/* %{buildroot}%{_prefix}/local
 cp -rv etc/* %{buildroot}%{_sysconfdir}
 # Remove unneeded files
 rm %{buildroot}%{_sysconfdir}/profile.d/kde.sh
 rm %{buildroot}%{_datadir}/applications/org.mozilla.firefox.desktop
 rm %{buildroot}%{_sysconfdir}/xdg/konsolerc
-rm -rf %{buildroot}%{_prefix}/local/share/applications
 
 # Do post-installation
 %post
@@ -72,20 +69,6 @@ rm -rf %{buildroot}%{_prefix}/local/share/applications
 %{_sysconfdir}/xdg/startkderc
 %{_bindir}/steamos-add-to-steam
 %{_prefix}/lib/udev/rules.d/99-kwin-ignore-tablet-mode.rules
-# %%{_prefix}/local/share/applications/UserFeedbackConsole.desktop
-# %%{_prefix}/local/share/applications/assistant.desktop
-# %%{_prefix}/local/share/applications/avahi-discover.desktop
-# %%{_prefix}/local/share/applications/bssh.desktop
-# %%{_prefix}/local/share/applications/bvnc.desktop
-# %%{_prefix}/local/share/applications/designer.desktop
-# %%{_prefix}/local/share/applications/htop.desktop
-# %%{_prefix}/local/share/applications/linguist.desktop
-# %%{_prefix}/local/share/applications/org.freedesktop.IBus.Setup.desktop
-# %%{_prefix}/local/share/applications/qdbusviewer.desktop
-# %%{_prefix}/local/share/applications/qv4l2.desktop
-# %%{_prefix}/local/share/applications/qvidcap.desktop
-# %%{_prefix}/local/share/applications/uxterm.desktop
-# %%{_prefix}/local/share/applications/xterm.desktop
 %{_datadir}/X11/xorg.conf.d/99-pointer.conf
 # %%{_datadir}/applications/org.mozilla.firefox.desktop
 %{_datadir}/icons/hicolor/scalable/actions/steamdeck-gaming-return.svg
