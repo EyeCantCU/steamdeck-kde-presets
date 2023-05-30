@@ -56,7 +56,6 @@ rm %{buildroot}%{_sysconfdir}/xdg/konsolerc
 # %%{_sysconfdir}/profile.d/kde.sh
 %{_sysconfdir}/skel/Desktop/Return.desktop
 %{_sysconfdir}/xdg/autostart/ibus.desktop
-%{_sysconfdir}/xdg/autostart/steam.desktop
 %{_sysconfdir}/xdg/gtk-2.0/gtkrc
 %{_sysconfdir}/xdg/gtk-3.0/settings.ini
 %{_sysconfdir}/xdg/kcminputrc
